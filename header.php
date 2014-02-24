@@ -20,14 +20,37 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-
+	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+		<div class="site-branding clear">
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div  class="tn_logo">
+      
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="TeeehN.com">
+	        <img src="<?php echo get_stylesheet_directory_uri() . '/images/tn-logo-160x104.png'; ?>" alt="TeeehN.com" >
+	      </a>
+
+      </div>
+
+      <hgroup class="clear">
+
+			  <h1 class="site-title">
+					<?php do_action('s_tn_site_title'); ?>
+        </h1>
+
+			  <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+
+      </hgroup>
+
+		</div>
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+		<nav id="site-navigation" class="main-navigation gradient" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 's_tn' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 's_tn' ); ?></a>
 

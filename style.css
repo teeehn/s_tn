@@ -41,7 +41,7 @@ and Blueprint http://www.blueprintcss.org/
 	10.2 - Asides
 	10.3 - Comments
 11.0 - Infinite scroll
-12.0 - Media
+11.0 - Media
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -420,21 +420,15 @@ a:active {
 		display: none;
 	}
 }
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
+.site-main [class*="navigation"] {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
+[class*="navigation"] .nav-previous {
 	float: left;
 	width: 50%;
 }
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
+[class*="navigation"] .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;

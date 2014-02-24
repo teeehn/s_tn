@@ -12,9 +12,10 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
+			<?php do_action( 's_tn_credits' ); ?>
 			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 's_tn' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 's_tn' ), 's_tn_tn', '<a href="http://thomasnicolosi.com" rel="designer">Thomas Nicolosi</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 's_tn' ), 's_tn', '<a href="http://thomasnicolosi.com" rel="designer">Thomas Nicolosi</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

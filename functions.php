@@ -79,7 +79,19 @@ add_action( 'widgets_init', 's_tn_widgets_init' );
  * Enqueue scripts and styles.
  */
 function s_tn_scripts() {
+
+  //base stylesheet
 	wp_enqueue_style( 's_tn-style', get_stylesheet_uri() );
+
+  //Twenty Eleven dark
+  wp_register_style( 's_tn-2011_dark', get_template_directory_uri() . '/dark.css' );
+
+	wp_enqueue_style( 's_tn-2011_dark');
+
+  //Custom
+  wp_register_style( 's_tn-custom', get_template_directory_uri() . '/custom.css' );
+
+	wp_enqueue_style( 's_tn-custom');
 
 	wp_enqueue_script( 's_tn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -115,3 +127,30 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+/**
+ * custom header
+ */
+//Add header logo
+function s_tn_add_logo(){
+	$logo = "<a href=\"".esc_url( home_url( '/' ) )."\" title=\"TeeehN.com\" class=\"tn_logo\">";
+	$logo .= "<img src=\"".get_stylesheet_directory_uri()."/images/tn-logo-160x104.png\" alt=\"TeeehN.com\" >";
+	$logo .= "</a>\n";
+	echo $logo;
+	}
+add_action('s_tn_header_logo','s_tn_add_logo');
+//Add site-title image
+function s_tn_add_site_title(){
+	$logo = "<a href=\"".esc_url( home_url( '/' ) )."\" title=\"TeeehN.com\">";
+	$logo .= "<img src=\"".get_stylesheet_directory_uri()."/images/web-developer.png\" alt=\"Web Developer\" >";
+	$logo .= "</a>\n";
+	echo $logo;
+	}
+add_action('s_tn_site_title','s_tn_add_site_title');
+//credits
+//s_tn_credits
+add_action('tn_site_title','tn_add_site_title');
+//Add copyright notice.
+function s_tn_copyright(){
+	echo "<p>Except where stated all content &copy; Copyright ". date("Y") . " Thomas Nicolosi. All rights reserved.</p>";
+	}
+add_action('s_tn_credits','s_tn_copyright');
