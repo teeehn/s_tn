@@ -16,6 +16,19 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="<?php echo get_stylesheet_directory_uri() . '/js/html5shiv.js' ?>"></script>
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/custom_ie.css' ?>">
+<![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
@@ -43,13 +56,6 @@
       </hgroup>
 
 		</div>
-<!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
 		<nav id="site-navigation" class="main-navigation gradient" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 's_tn' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 's_tn' ); ?></a>

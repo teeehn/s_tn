@@ -1,0 +1,65 @@
+/**
+ * Custom for IE lt 9
+ */
+
+/**
+ * Full Screen and Tablet
+ */
+
+.site-branding hgroup {
+  float: left;
+  margin: 1em 0 0;
+}
+
+
+
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+}
+nav.main-navigation {
+	font-size: 100%;
+}
+.main-navigation ul {
+	display: block;
+}
+.main-navigation ul li {
+	float: left;
+}
+.main-navigation ul li a {
+	line-height: 3.333em;
+	padding: 0 1.2125em;
+}
+#page {
+	margin-top: 30px;
+}
+nav.main-navigation li.current_page_item a {
+	color: #fff;
+	background: #333;
+}
+.site-branding {
+	background-repeat: no-repeat;
+	height: 163px;
+}
+.site-branding hgroup {
+	padding: 3.65625em 0 0;
+	position: relative; 
+	top: 0;
+	left: 0;
+	float: left;
+}
+.site-branding hgroup img {
+	width: auto;
+}
+.tn_logo {
+	margin: 2em 2em 0 0;
+	padding-left: 2em;
+}
+.tn_logo a {
+	display: block;
+}
+.tn_logo img {
+	width: auto;
+	margin: 0;
+}
+nav.main-navigation a.skip-link {display:none;}
